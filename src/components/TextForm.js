@@ -55,12 +55,12 @@ export default function TextForm(props) {
         <div className="mb-3">
         <textarea className="form-control" value= {text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#0d273c':'white',color:props.mode==='dark'?'white':'#0d273c'}} id="myBox" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
-        <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
-        <button className="btn btn-primary mx-1" onClick={handleReverseClick}>Reverse the Text</button>
-        <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Clear Extra Spaces</button>
-        <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy the Text</button>
-        <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
+        <button disabled={text.length===0 }className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleReverseClick}>Reverse the Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Clear Extra Spaces</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleCopy}>Copy the Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleClearClick}>Clear</button>
     </div>
     <div className="container my-3"style={{color: props.mode==='dark'?'white':'#03111c'}}>
       <h2>Your text Summary</h2>
